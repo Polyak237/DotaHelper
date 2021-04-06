@@ -7,6 +7,17 @@
     android:background="#333333"
     tools:context=".MainActivity">
 
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="213dp"
+        android:layout_height="215dp"
+        android:layout_marginStart="96dp"
+        android:layout_marginLeft="96dp"
+        android:layout_marginBottom="100dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/mainlogo" />
+
     <Button
         android:id="@+id/btnHeroesMenu"
         android:layout_width="331dp"
@@ -29,7 +40,7 @@
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         app:backgroundTint="#810202"
         app:layout_constraintEnd_toEndOf="@+id/btnHeroesMenu"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.51"
         app:layout_constraintStart_toStartOf="@+id/btnHeroesMenu"
         app:layout_constraintTop_toBottomOf="@+id/btnHeroesMenu"
         app:strokeColor="#00000000" />
