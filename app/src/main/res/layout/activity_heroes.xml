@@ -7,68 +7,74 @@
     android:background="#333333"
     tools:context=".Heroes">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:layout_marginTop="55dp"
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="391dp"
+        android:layout_height="76dp"
+        android:layout_marginTop="4dp"
         android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-
-        <TextView
-            android:id="@+id/textSort"
-            android:layout_width="167dp"
-            android:layout_height="wrap_content"
-            android:fontFamily="sans-serif"
-            android:gravity="center"
-            android:text="Сортировка:"
-            android:textColor="#FFFFFF"
-            android:textSize="24sp" />
+        app:layout_constraintTop_toBottomOf="@+id/textSort">
 
         <RadioButton
-            android:id="@+id/btnHeroesSortAlf"
-            android:layout_width="116dp"
-            android:layout_height="match_parent"
+            android:id="@+id/btnHeroesSortOff"
+            android:layout_width="144dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-light"
+            android:text="Отключена"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp" />
+
+        <RadioButton
+            android:id="@+id/btnItemsSortAlf"
+            android:layout_width="127dp"
+            android:layout_height="wrap_content"
             android:fontFamily="sans-serif-light"
             android:text="Алфавит"
             android:textColor="#FFFFFF"
             android:textSize="18sp" />
 
         <RadioButton
-            android:id="@+id/btnHeroesSortAtr"
+            android:id="@+id/btnItemssSortAtr"
             android:layout_width="wrap_content"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:layout_weight="1"
             android:fontFamily="sans-serif-light"
             android:text="Атрибут"
             android:textColor="#FFFFFF"
             android:textSize="18sp" />
-    </LinearLayout>
 
-    <ScrollView
-        android:layout_width="414dp"
-        android:layout_height="603dp"
-        android:layout_marginTop="120dp"
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/textSort"
+        android:layout_width="150dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="128dp"
+        android:layout_marginLeft="128dp"
+        android:layout_marginTop="5dp"
+        android:fontFamily="sans-serif"
+        android:gravity="center"
+        android:text="Сортировка:"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical" />
-    </ScrollView>
+        app:layout_constraintTop_toBottomOf="@+id/findItems" />
 
     <EditText
-        android:id="@+id/findHeroes"
-        android:layout_width="311dp"
-        android:layout_height="43dp"
-        android:layout_marginTop="12dp"
+        android:id="@+id/findItems"
+        android:layout_width="389dp"
+        android:layout_height="44dp"
         android:ems="10"
+        android:hint="Поиск:"
         android:inputType="textPersonName"
-        android:text="Поиск:"
         android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.013" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
