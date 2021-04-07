@@ -19,7 +19,6 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private Button btnHeroesMenu;
-    private Button btnItemsMenu;
 
     public void addListenerOnButtonHeroesMenu () {
         btnHeroesMenu = (Button)findViewById(R.id.btnHeroesMenu);
@@ -35,6 +34,8 @@ public class MainActivity extends AppCompatActivity {
         );
     }
 
+    private Button btnItemsMenu;
+
     public void addListenerOnButtonItemsMenu () {
         btnItemsMenu = (Button)findViewById(R.id.btnItemsMenu);
 
@@ -48,4 +49,6 @@ public class MainActivity extends AppCompatActivity {
                 }
         );
     }
+
+
 }
