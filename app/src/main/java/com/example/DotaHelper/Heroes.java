@@ -2,6 +2,7 @@ package com.example.DotaHelper;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -14,11 +15,11 @@ public class Heroes extends AppCompatActivity {
         setContentView(R.layout.activity_heroes);
         addListenerOnButtonSortAlf ();
         addListenerOnButtonSortAtr ();
+        addListenerOnButtonPageUrsa ();
+
     }
 
     private Button btnHeroesSortAlf;
-    private Button btnHeroesSortAtr;
-
     public void addListenerOnButtonSortAlf () {
         btnHeroesSortAlf = (Button)findViewById(R.id.btnItemsSortAlf);
 
@@ -32,6 +33,7 @@ public class Heroes extends AppCompatActivity {
         );
     }
 
+    private Button btnHeroesSortAtr;
     public void addListenerOnButtonSortAtr () {
         btnHeroesSortAtr = (Button)findViewById(R.id.btnItemssSortAtr);
 
@@ -44,4 +46,20 @@ public class Heroes extends AppCompatActivity {
                 }
         );
     }
+
+    private Button btnPageUrsa;
+    public void addListenerOnButtonPageUrsa () {
+        btnPageUrsa = (Button) findViewById(R.id.btnPageUrsa);
+
+        btnPageUrsa.setOnClickListener(
+                new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        Intent intent = new Intent(".pageUrsa");
+                        startActivity(intent);
+                    }
+                }
+        );
+    }
+
 }
